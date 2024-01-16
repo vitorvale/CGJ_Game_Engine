@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{25776b28-c9e8-4fb6-b5a8-9df35cc76487}</ProjectGuid>
+    <RootNamespace>AVT_project</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)Dependencies\devil\include;$(ProjectDir)Dependencies\freeglut\include;$(ProjectDir)Dependencies\glew\include;$(ProjectDir)Dependencies\assimp\include;$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Dependencies\lib\$(Platform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)Dependencies\devil\include;$(ProjectDir)Dependencies\freeglut\include;$(ProjectDir)Dependencies\glew\include;$(ProjectDir)Dependencies\assimp\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Dependencies\lib\$(Platform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>freeglut.lib;glew32.lib;DevIL.lib;assimp.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy /y /d  "$(ProjectDir)Dependencies\lib\$(Platform)\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>freeglut.lib;glew32.lib;DevIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>Dependencies.exe</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy /y /d  "$(ProjectDir)Dependencies\lib\$(Platform)\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="avtFreeType.cpp" />
+    <ClCompile Include="AVTmathLib.cpp" />
+    <ClCompile Include="basic_geometry.cpp" />
+    <ClCompile Include="Camera\Camera.cpp" />
+    <ClCompile Include="Camera\PerspectiveCamera.cpp" />
+    <ClCompile Include="Camera\OrthographicCamera.cpp" />
+    <ClCompile Include="GameObjects\Billboard.cpp" />
+    <ClCompile Include="GameObjects\Car.cpp" />
+    <ClCompile Include="GameObjects\Cheerios.cpp" />
+    <ClCompile Include="GameObjects\GrassElement.cpp" />
+    <ClCompile Include="GameObjects\Table.cpp" />
+    <ClCompile Include="l3dBillboard.cpp" />
+    <ClCompile Include="lightDemo.cpp" />
+    <ClCompile Include="Lights\PointLight.cpp" />
+    <ClCompile Include="Lights\DirectionalLight.cpp" />
+    <ClCompile Include="Lights\Light.cpp" />
+    <ClCompile Include="Lights\SpotLight.cpp" />
+    <ClCompile Include="meshFromAssimp.cpp" />
+    <ClCompile Include="MicroMachines3D.cpp" />
+    <ClCompile Include="GameObjects\Orange.cpp" />
+    <ClCompile Include="multiTexDemo.cpp" />
+    <ClCompile Include="GameHudManager.cpp" />
+    <ClCompile Include="SceneGraph\Body.cpp" />
+    <ClCompile Include="SceneGraph\Node.cpp" />
+    <ClCompile Include="SceneGraph\Root.cpp" />
+    <ClCompile Include="SceneGraph\RearMirror.cpp" />
+    <ClCompile Include="SceneGraph\Top.cpp" />
+    <ClCompile Include="SceneGraph\Wheel.cpp" />
+    <ClCompile Include="TimeUtil.cpp" />
+    <ClCompile Include="Texture_Loader.cpp" />
+    <ClCompile Include="vsShaderLib.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assimp\include\assimp\aabb.h" />
+    <ClInclude Include="assimp\include\assimp\ai_assert.h" />
+    <ClInclude Include="assimp\include\assimp\anim.h" />
+    <ClInclude Include="assimp\include\assimp\BaseImporter.h" />
+    <ClInclude Include="assimp\include\assimp\Bitmap.h" />
+    <ClInclude Include="assimp\include\assimp\BlobIOSystem.h" />
+    <ClInclude Include="assimp\include\assimp\ByteSwapper.h" />
+    <ClInclude Include="assimp\include\assimp\camera.h" />
+    <ClInclude Include="assimp\include\assimp\cexport.h" />
+    <ClInclude Include="assimp\include\assimp\cfileio.h" />
+    <ClInclude Include="assimp\include\assimp\cimport.h" />
+    <ClInclude Include="assimp\include\assimp\color4.h" />
+    <ClInclude Include="assimp\include\assimp\Compiler\poppack1.h" />
+    <ClInclude Include="assimp\include\assimp\Compiler\pstdint.h" />
+    <ClInclude Include="assimp\include\assimp\Compiler\pushpack1.h" />
+    <ClInclude Include="assimp\include\assimp\config.h" />
+    <ClInclude Include="assimp\include\assimp\CreateAnimMesh.h" />
+    <ClInclude Include="assimp\include\assimp\DefaultIOStream.h" />
+    <ClInclude Include="assimp\include\assimp\DefaultIOSystem.h" />
+    <ClInclude Include="assimp\include\assimp\DefaultLogger.hpp" />
+    <ClInclude Include="assimp\include\assimp\Defines.h" />
+    <ClInclude Include="assimp\include\assimp\defs.h" />
+    <ClInclude Include="assimp\include\assimp\Exceptional.h" />
+    <ClInclude Include="assimp\include\assimp\Exporter.hpp" />
+    <ClInclude Include="assimp\include\assimp\fast_atof.h" />
+    <ClInclude Include="assimp\include\assimp\GenericProperty.h" />
+    <ClInclude Include="assimp\include\assimp\Hash.h" />
+    <ClInclude Include="assimp\include\assimp\Importer.hpp" />
+    <ClInclude Include="assimp\include\assimp\importerdesc.h" />
+    <ClInclude Include="assimp\include\assimp\IOStream.hpp" />
+    <ClInclude Include="assimp\include\assimp\IOStreamBuffer.h" />
+    <ClInclude Include="assimp\include\assimp\IOSystem.hpp" />
+    <ClInclude Include="assimp\include\assimp\irrXMLWrapper.h" />
+    <ClInclude Include="assimp\include\assimp\light.h" />
+    <ClInclude Include="assimp\include\assimp\LineSplitter.h" />
+    <ClInclude Include="assimp\include\assimp\LogAux.h" />
+    <ClInclude Include="assimp\include\assimp\Logger.hpp" />
+    <ClInclude Include="assimp\include\assimp\LogStream.hpp" />
+    <ClInclude Include="assimp\include\assimp\Macros.h" />
+    <ClInclude Include="assimp\include\assimp\material.h" />
+    <ClInclude Include="assimp\include\assimp\MathFunctions.h" />
+    <ClInclude Include="assimp\include\assimp\matrix3x3.h" />
+    <ClInclude Include="assimp\include\assimp\matrix4x4.h" />
+    <ClInclude Include="assimp\include\assimp\MemoryIOWrapper.h" />
+    <ClInclude Include="assimp\include\assimp\mesh.h" />
+    <ClInclude Include="assimp\include\assimp\metadata.h" />
+    <ClInclude Include="assimp\include\assimp\NullLogger.hpp" />
+    <ClInclude Include="assimp\include\assimp\ParsingUtils.h" />
+    <ClInclude Include="assimp\include\assimp\pbrmaterial.h" />
+    <ClInclude Include="assimp\include\assimp\port\AndroidJNI\AndroidJNIIOSystem.h" />
+    <ClInclude Include="assimp\include\assimp\postprocess.h" />
+    <ClInclude Include="assimp\include\assimp\Profiler.h" />
+    <ClInclude Include="assimp\include\assimp\ProgressHandler.hpp" />
+    <ClInclude Include="assimp\include\assimp\qnan.h" />
+    <ClInclude Include="assimp\include\assimp\quaternion.h" />
+    <ClInclude Include="assimp\include\assimp\RemoveComments.h" />
+    <ClInclude Include="assimp\include\assimp\scene.h" />
+    <ClInclude Include="assimp\include\assimp\SceneCombiner.h" />
+    <ClInclude Include="assimp\include\assimp\SGSpatialSort.h" />
+    <ClInclude Include="assimp\include\assimp\SkeletonMeshBuilder.h" />
+    <ClInclude Include="assimp\include\assimp\SmoothingGroups.h" />
+    <ClInclude Include="assimp\include\assimp\SpatialSort.h" />
+    <ClInclude Include="assimp\include\assimp\StandardShapes.h" />
+    <ClInclude Include="assimp\include\assimp\StreamReader.h" />
+    <ClInclude Include="assimp\include\assimp\StreamWriter.h" />
+    <ClInclude Include="assimp\include\assimp\StringComparison.h" />
+    <ClInclude Include="assimp\include\assimp\StringUtils.h" />
+    <ClInclude Include="assimp\include\assimp\Subdivision.h" />
+    <ClInclude Include="assimp\include\assimp\texture.h" />
+    <ClInclude Include="assimp\include\assimp\TinyFormatter.h" />
+    <ClInclude Include="assimp\include\assimp\types.h" />
+    <ClInclude Include="assimp\include\assimp\vector2.h" />
+    <ClInclude Include="assimp\include\assimp\vector3.h" />
+    <ClInclude Include="assimp\include\assimp\version.h" />
+    <ClInclude Include="assimp\include\assimp\Vertex.h" />
+    <ClInclude Include="assimp\include\assimp\XMLTools.h" />
+    <ClInclude Include="assimp\include\assimp\ZipArchiveIOSystem.h" />
+    <ClInclude Include="avtFreeType.h" />
+    <ClInclude Include="AVTmathLib.h" />
+    <ClInclude Include="Camera\Camera.h" />
+    <ClInclude Include="Camera\OrthographicCamera.h" />
+    <ClInclude Include="Camera\PerspectiveCamera.h" />
+    <ClInclude Include="cube.h" />
+    <ClInclude Include="flare.h" />
+    <ClInclude Include="freetype\config\ftconfig.h" />
+    <ClInclude Include="freetype\config\ftheader.h" />
+    <ClInclude Include="freetype\config\ftmodule.h" />
+    <ClInclude Include="freetype\config\ftoption.h" />
+    <ClInclude Include="freetype\config\ftstdlib.h" />
+    <ClInclude Include="freetype\config\integer-types.h" />
+    <ClInclude Include="freetype\config\mac-support.h" />
+    <ClInclude Include="freetype\config\public-macros.h" />
+    <ClInclude Include="freetype\freetype.h" />
+    <ClInclude Include="freetype\ftadvanc.h" />
+    <ClInclude Include="freetype\ftbbox.h" />
+    <ClInclude Include="freetype\ftbdf.h" />
+    <ClInclude Include="freetype\ftbitmap.h" />
+    <ClInclude Include="freetype\ftbzip2.h" />
+    <ClInclude Include="freetype\ftcache.h" />
+    <ClInclude Include="freetype\ftchapters.h" />
+    <ClInclude Include="freetype\ftcid.h" />
+    <ClInclude Include="freetype\ftcolor.h" />
+    <ClInclude Include="freetype\ftdriver.h" />
+    <ClInclude Include="freetype\fterrdef.h" />
+    <ClInclude Include="freetype\fterrors.h" />
+    <ClInclude Include="freetype\ftfntfmt.h" />
+    <ClInclude Include="freetype\ftgasp.h" />
+    <ClInclude Include="freetype\ftglyph.h" />
+    <ClInclude Include="freetype\ftgxval.h" />
+    <ClInclude Include="freetype\ftgzip.h" />
+    <ClInclude Include="freetype\ftimage.h" />
+    <ClInclude Include="freetype\ftincrem.h" />
+    <ClInclude Include="freetype\ftlcdfil.h" />
+    <ClInclude Include="freetype\ftlist.h" />
+    <ClInclude Include="freetype\ftlogging.h" />
+    <ClInclude Include="freetype\ftlzw.h" />
+    <ClInclude Include="freetype\ftmac.h" />
+    <ClInclude Include="freetype\ftmm.h" />
+    <ClInclude Include="freetype\ftmodapi.h" />
+    <ClInclude Include="freetype\ftmoderr.h" />
+    <ClInclude Include="freetype\ftotval.h" />
+    <ClInclude Include="freetype\ftoutln.h" />
+    <ClInclude Include="freetype\ftparams.h" />
+    <ClInclude Include="freetype\ftpfr.h" />
+    <ClInclude Include="freetype\ftrender.h" />
+    <ClInclude Include="freetype\ftsizes.h" />
+    <ClInclude Include="freetype\ftsnames.h" />
+    <ClInclude Include="freetype\ftstroke.h" />
+    <ClInclude Include="freetype\ftsynth.h" />
+    <ClInclude Include="freetype\ftsystem.h" />
+    <ClInclude Include="freetype\fttrigon.h" />
+    <ClInclude Include="freetype\fttypes.h" />
+    <ClInclude Include="freetype\ftwinfnt.h" />
+    <ClInclude Include="freetype\t1tables.h" />
+    <ClInclude Include="freetype\ttnameid.h" />
+    <ClInclude Include="freetype\tttables.h" />
+    <ClInclude Include="freetype\tttags.h" />
+    <ClInclude Include="ft2build.h" />
+    <ClInclude Include="GameHudManager.h" />
+    <ClInclude Include="GameObjects\Cheerios.h" />
+    <ClInclude Include="GameObjects\GameObject3D.h" />
+    <ClInclude Include="GameObjects\Car.h" />
+    <ClInclude Include="GameObjects\Billboard.h" />
+    <ClInclude Include="GameObjects\GrassElement.h" />
+    <ClInclude Include="l3DBillboard.h" />
+    <ClInclude Include="Lights\DirectionalLight.h" />
+    <ClInclude Include="Lights\SpotLight.h" />
+    <ClInclude Include="Lights\Light.h" />
+    <ClInclude Include="Lights\PointLight.h" />
+    <ClInclude Include="meshFromAssimp.h" />
+    <ClInclude Include="SceneGraph\Body.h" />
+    <ClInclude Include="SceneGraph\RearMirror.h" />
+    <ClInclude Include="SceneGraph\Node.h" />
+    <ClInclude Include="SceneGraph\Root.h" />
+    <ClInclude Include="SceneGraph\Top.h" />
+    <ClInclude Include="SceneGraph\Wheel.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="TimeUtil.h" />
+    <ClInclude Include="GameObjects\Table.h" />
+    <ClInclude Include="geometry.h" />
+    <ClInclude Include="GameObjects\Orange.h" />
+    <ClInclude Include="Texture_Loader.h" />
+    <ClInclude Include="VertexAttrDef.h" />
+    <ClInclude Include="vsShaderLib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="assimp\include\assimp\.editorconfig" />
+    <None Include="assimp\include\assimp\color4.inl" />
+    <None Include="assimp\include\assimp\config.h.in" />
+    <None Include="assimp\include\assimp\material.inl" />
+    <None Include="assimp\include\assimp\matrix3x3.inl" />
+    <None Include="assimp\include\assimp\matrix4x4.inl" />
+    <None Include="assimp\include\assimp\quaternion.inl" />
+    <None Include="assimp\include\assimp\SmoothingGroups.inl" />
+    <None Include="assimp\include\assimp\vector2.inl" />
+    <None Include="assimp\include\assimp\vector3.inl" />
+    <None Include="Dependencies.exe" />
+    <None Include="shaders\grass.frag" />
+    <None Include="shaders\grass.vert" />
+    <None Include="shaders\pointlight.frag" />
+    <None Include="shaders\grass.geom" />
+    <None Include="shaders\pointlight.vert" />
+    <None Include="shaders\shake.frag" />
+    <None Include="shaders\shake.vert" />
+    <None Include="shaders\text.frag" />
+    <None Include="shaders\text.vert" />
+    <None Include="shaders\texture_demo.frag" />
+    <None Include="shaders\texture_demo.vert" />
+    <None Include="x64\Debug\AVT_project.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="butter_drip.tga" />
+    <Image Include="checker.png" />
+    <Image Include="checkers_pattern.png" />
+    <Image Include="crcl.tga" />
+    <Image Include="flar.tga" />
+    <Image Include="heightmap.png" />
+    <Image Include="hxgn.tga" />
+    <Image Include="lightwood.tga" />
+    <Image Include="negx.jpg" />
+    <Image Include="negy.jpg" />
+    <Image Include="negz.jpg" />
+    <Image Include="normal.tga" />
+    <Image Include="orange_normal.tga" />
+    <Image Include="particle.tga" />
+    <Image Include="posx.jpg" />
+    <Image Include="posy.jpg" />
+    <Image Include="posz.jpg" />
+    <Image Include="ring.tga" />
+    <Image Include="stone.tga" />
+    <Image Include="sun.tga" />
+    <Image Include="tree.tga" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="fonts\arial.ttf" />
+    <Font Include="fonts\arialbd.ttf" />
+    <Font Include="fonts\arialbi.ttf" />
+    <Font Include="fonts\ariali.ttf" />
+    <Font Include="fonts\ARIALN.TTF" />
+    <Font Include="fonts\ARIALNB.TTF" />
+    <Font Include="fonts\ARIALNBI.TTF" />
+    <Font Include="fonts\ARIALNI.TTF" />
+    <Font Include="fonts\ariblk.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="flare.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

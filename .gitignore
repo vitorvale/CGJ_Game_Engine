@@ -1,32 +1,20 @@
-# Prerequisites
-*.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+*.filters
+*.user
+\.vs/
+x64/
+x64/Debug/AVT_project.tlog/CL.command.1.tlog
+x64/Debug/AVT_project.tlog/CL.command.1.tlog
+x64/Debug/AVT_project.tlog/CL.read.1.tlog
+*.tlog
+x64/Debug/vc142.idb
+x64/Debug/vc142.pdb
+x64/Debug/AVT_project.exe
+x64/Debug/AVT_project.ilk
+x64/Debug/AVT_project.pdb
+x64/Debug/AVT_project.tlog/CL.command.1.tlog
+x64/Debug/AVT_project.tlog/CL.read.1.tlog
+x64/Debug/AVT_project.tlog/CL.write.1.tlog
+x64/Debug/AVT_project.tlog/link.read.1.tlog
+x64/Debug/vc142.idb
+x64/Debug/vc142.pdb
